@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="/static/favicon.ico" rel="icon" type="image/x-icon"/>
+    </head>
+
+    <body>
+
+      <nav class = "#00bfa5 teal accent-4 z-depth-3">
+    <div class="navbar-fixed container ">
+        <a href="/" class="brand-logo"><img src="/static/icon.png" height="60" width="60" class="hide-on-med-and-down"/></a>
+      <a href="/" class="brand-logo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CS Dictionary</a>
+    </div>
+  </nav>
+      <div class="container">
+          <br><br>
+          <h5>What is CS Dictionary?</h5>
+          <p>CS Dictionary uses MicroStrategy's embedded analytics system to create a dictionary for technological
+              jargon and displays it to the user in the form of a hyper-intelligence card. This is useful for people who
+              are trying to learn or have forgotten information related to technology. By showing definitions in the terms
+              of hyper-intelligence cards, it makes it easier for the user to grasp the concepts of harder topics in a webpage
+              without navigating away.</p>
+          <br>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hFYR2vX4H9I" frameborder="0" allowfullscreen></iframe>
+      </div>
+          <br><br>
+          <div class="row">
+            <div class="left">
+              <div class="card-panel hoverable #a7ffeb teal accent-1 z-depth-2">
+                <span class="black-text">
+                <h5 >Motivation</h5>
+                        <p class = "row s12">In an world where technological evolution is exponential, it is imperative that professionals keep up. There are always new things to learn,
+                        remember, and research. CS Dictionary was created with the goal of simplifying that process in mind. Having to constantly Google new and forgotten keywords can be
+                        time consuming and CS Dictionary seeks to fix that problem for both technical and non-technical people alike.</p>
+                </span>
+              </div>
+            </div>
+
+          </div>
+          <br>
+        <h5>Methodology</h5>
+            <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_list</i>1. Data Collection<span class="teal white-text badge">Python</span></div>
+      <div class="collapsible-body"><span>When beginning our project, it was clear that the natural place to start was
+      with data collection. We needed to find some sort of list or database of technical jargon. Surprisingly, after a long
+      Google search we were unable to find such a collection that fit our needs. This motivated us even more as the need for a
+      tool like CS Dictionary became even more clear. We decided that we would have to generate our own database of words through
+          some form of web scraping. We turned to possibly the most comprehensive resource in the world,
+          <a href="https://www.wikipedia.org/">Wikipedia</a>. Using Wikipedia's API, we created a script that would gather all
+          our key words using a graph traversal algorithm similar to depth first. One of the final versions of this script can be found
+          <a href="https://github.com/OliverMKing/CSDictionary_Gatherer/blob/master/search.py">here</a>.
+      </span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">domain</i>2. Database Population<span class="teal white-text badge">AWS and mySQL</span></div>
+      <div class="collapsible-body"><span>The next step was to take the script that pulled from Wikipedia and make it populate our database. First, we
+           created an AWS RDS (relational database service) using mySQL. Then, after many iterations we arrived at <a href="https://github.com/OliverMKing/CSDictionary_Gatherer/blob/master/database_populator.py">this</a>.
+          We scrapped the key computer science terms from Wikipedia for about an hour and a half and populated our database at the same time. Using our script
+          we were able to gather words, definitions, links and synonyms all at the same time.
+      </span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">assessment</i>3. Linking With Microstrategy<span class="teal white-text badge">MicroStrategy HyperCards</span></div>
+      <div class="collapsible-body"><span>We created a Microstrategy environment and linked it to our AWS database. From there, we used the data to create HyperCards. This process was fairly simple once
+      we got our database connected. However, due to the nature of chrome apps, the project had to be limited in terms of scope. In the future we may explore implementing something without limitations like this.</span></div>
+    </li>
+  </ul>
+    <br><br>
+          <h5>Who Are We?</h5>
+
+                    <ul class="collection #a7ffeb teal accent-1 hoverable">
+
+                                    <li class="collection-item avatar">
+              <img src="../static/OliverK.png" alt="Oliver King" class="circle">
+              <span class="title">Oliver King</span>
+                 <a class = "right" href="https://github.com/OliverMKing"> <img src="../static/GitHub.png" alt="github" height = "40" width = "40"></a>
+              <p>Software Engineer <br>
+                  University of North Carolina at Charlotte
+              </p>
+                <br>
+
+            </li>
+            <li class="collection-item avatar">
+              <img src="../static/BonaventureR.png" alt="Bonaventure Raj" class="circle">
+              <span class="title">Bonaventure Raj</span>
+                <a class = "right" href="https://github.com/BonaventureR"> <img src="../static/GitHub.png" alt="github" height = "40" width = "40"></a>
+              <p>Data Science <br>
+                  University of North Carolina at Charlotte
+              </p>
+                <br>
+            </li>
+
+            <li class="collection-item avatar">
+                <img src="../static/StefanD.png" alt="Stefan Dykba" class="circle">
+              <span class="title">Stefan Dykba</span>
+                <a class = "right" href="https://github.com/5t3f4nUNCC"> <img src="../static/GitHub.png" alt="github" height = "40" width = "40"></a>
+              <p> Cybersecurity <br>
+                  University of North Carolina at Charlotte
+              </p>
+                <br>
+            </li>
+              <li class = "collection-item avatar">
+              <img src="../static/JoshW.png" alt="Josh Williams" class="circle">
+              <span class="title">Josh Williams</span>
+              <a class = "right" href="https://github.com/jwill564"> <img src="../static/GitHub.png" alt="github" height = "40" width = "40"></a>
+              <p>Software Engineer <br>
+                  University of North Carolina at Charlotte
+              </p>
+                  <br>
+            </li>
+          </ul>
+          <br>
+
+      </div>
+
+    <script>
+    $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+    </script>
+
+
+          <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+
+</html>
